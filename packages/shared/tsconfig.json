@@ -3,10 +3,12 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
+    "declaration": true,
     "noEmit": false,
     "module": "CommonJS",
+    "moduleResolution": "Node",
     "target": "ES2022"
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
-
