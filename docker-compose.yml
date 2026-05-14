@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: beatzy
+      POSTGRES_PASSWORD: beatzy
+      POSTGRES_DB: beatzy
+    ports:
+      - "5432:5432"
+    volumes:
+      - beatzy_pgdata:/var/lib/postgresql/data
+
+volumes:
+  beatzy_pgdata:
+

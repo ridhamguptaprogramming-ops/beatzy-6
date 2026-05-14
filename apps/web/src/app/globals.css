@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+  }
+}
+
