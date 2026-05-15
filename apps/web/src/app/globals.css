@@ -1,19 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* Shimmer Animation */
 @keyframes shimmer {
-  0% {
+  from {
     transform: translateX(-100%);
   }
-  100% {
+
+  to {
     transform: translateX(200%);
   }
 }
 
+/* Custom Utilities */
 @layer utilities {
   .shadow-glow {
     box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
   }
-}
 
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+}

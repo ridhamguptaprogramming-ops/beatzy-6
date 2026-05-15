@@ -13,6 +13,15 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ limit: '20mb' }));
 app.use(morgan('dev'));
 
+app.get('/', (_req: express.Request, res: express.Response) => {
+  res.json({
+    ok: true,
+    service: 'beatzy-api',
+    health: '/api/health',
+    web: 'http://localhost:3001'
+  });
+});
+
 app.get('/api/health', (_req: express.Request, res: express.Response) => {
   res.json({ ok: true, service: 'beatzy-api' });
 });
@@ -22,5 +31,4 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`[beatzy-api] listening on :${port}`);
 });
-
 
